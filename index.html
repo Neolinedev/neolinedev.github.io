@@ -232,28 +232,37 @@
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-md-6 mb-3">
-          <img src="img/4.png" width="100%" alt="" />
-        </div>
         <div class="col-md-6 fw-bold">
-          <form>
+          <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+            <strong>Thankyou !</strong> Your message has been sent.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          <form name="submit-to-google-sheet">
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Nama</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby=" emailHelp" />
+              <input type="text" class="form-control" name="nama" id="exampleInputEmail1" aria-describedby=" emailHelp"
+                required />
             </div>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Email</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby=" emailHelp" />
+              <input type="email" class="form-control" name="email" id="exampleInputEmail1"
+                aria-describedby=" emailHelp" required />
             </div>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">No Telepon</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby=" emailHelp" />
+              <input type="text" class="form-control" name="no_telp" id="exampleInputEmail1"
+                aria-describedby=" emailHelp" required />
             </div>
             <div class="mb-3">
               <label for="exampleFormControlTextarea1" class="form-label">Pesan</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows=" 5"></textarea>
+              <textarea class="form-control" name="pesan" id="exampleFormControlTextarea1" rows=" 5"
+                required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary btn-submit">Submit</button>
+            <button class="btn btn-primary d-none btn-loading" type="button" disabled>
+              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+              Loading...
+            </button>
           </form>
         </div>
       </div>
